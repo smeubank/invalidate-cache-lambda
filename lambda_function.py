@@ -3,6 +3,9 @@ import logging
 import boto3
 import time
 import os
+
+#The distribution ID of the AWS CloudFront distribution is set as an environment variable of the function
+DistributionId = os.environ['DISTRIBUTION_ID']
  
 def lambda_handler(event, context):
     logger = logging.getLogger()
@@ -12,7 +15,7 @@ def lambda_handler(event, context):
     allFiles = ['/*']
     client = boto3.client('cloudfront')
     invalidation = client.create_invalidation(
-        DistributionId = os.environ['DistributionId']
+        DistributionId = DistributionId,
         InvalidationBatch={
             'Paths': {
                 'Quantity': 1,
