@@ -8,7 +8,7 @@ Using python3 and [boto3](https://boto3.amazonaws.com/v1/documentation/api/lates
 
 Continuous integration and delivery to Lamda Functions is ensured with Git Actions 
 
-![Lambda CI/CD](https://github.com/smeubank/invalidate-cache-lambda/blob/smeubank/assets/lamda-cicd.PNG?raw=true)
+![Lambda CI/CD](https://github.com/smeubank/invalidate-cache-lambda/blob/main/assets/lamda-cicd.PNG?raw=true)
 
 # Reference
 
