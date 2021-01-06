@@ -8,6 +8,8 @@ Using python3 and [boto3](https://boto3.amazonaws.com/v1/documentation/api/lates
 
 Continuous integration and delivery to Lamda Functions is ensured with Git Actions 
 
+![Lambda CI/CD](https://github.com/smeubank/invalidate-cache-lambda/blob/smeubank-patch-1/assets/lamda-cicd.PNG?raw=true)
+
 # Reference
 
 [Modern CI/CD Pipeline: Github Actions with AWS Lambda Serverless Python Functions and API Gateway](https://towardsdatascience.com/modern-ci-cd-pipeline-git-actions-with-aws-lambda-serverless-python-functions-and-api-gateway-9ef20b3ef64a)
