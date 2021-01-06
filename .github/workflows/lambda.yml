@@ -37,19 +37,16 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: eu-central-1
-          profile_name: default
-          project_name: <your project name>
+          aws-region: ${{ secrets.AWS_REGION }}
           runtime: python3.7
-          s3_bucket: <your bucket name>
     
-      #Deploy main.py to AWS
+      #Deploy lambda_function.py to AWS
       - name: AWS Lambda Deploy
         uses: appleboy/lambda-action@v0.0.8
         with:
               #name of my AWS Lambda Function
-              function_name: invalidate-cloudFront-cache
+              function_name: ${{ secrets.AWS_FUNCTION }}
               #contains all the files in my github repository
-              zip_file: invalidate-cloudFront-cache.zip
+              zip_file: ${{ secrets.AWS_FUNCTION }}.zip
               
       
