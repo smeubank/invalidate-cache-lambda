@@ -4,7 +4,7 @@ import boto3
 import time
 import os
 
-#The distribution ID of the AWS CloudFront distribution is set as an environment variable of the function
+#123The distribution ID of the AWS CloudFront distribution is set as an environment variable of the function
 DistributionId = os.environ['DISTRIBUTION_ID']
  
 def lambda_handler(event, context):
