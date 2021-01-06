@@ -38,9 +38,9 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
-          runtime: python3.7
-          profile_name: ${{ secrets.AWS_PROFILE }}
-          project_name: ${{ secrets.AWS_PROJECT }}
+          #runtime: python3.7
+          #profile_name: ${{ secrets.AWS_PROFILE }}
+          #project_name: ${{ secrets.AWS_PROJECT }}
           #s3_bucket: ${{ secrets.AWS_BUCKET }}
     
       #Deploy lambda_function.py to AWS
