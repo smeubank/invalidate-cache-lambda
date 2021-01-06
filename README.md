@@ -4,7 +4,7 @@ Lambda function which is invoked as one of the jobs in a codepipeline for a [sta
 
 Using python3 and [boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/cloudfront.html) to invalidate the CloudFront distribution cache and set the pipline job to complete.
 
-# CI/CD
+# CI/CD GitOps
 
 Continuous integration and delivery to Lamda Functions is ensured with Git Actions 
 
