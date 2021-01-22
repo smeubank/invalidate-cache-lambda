@@ -43,24 +43,6 @@ jobs:
           #project_name: ${{ secrets.AWS_PROJECT }}
           #s3_bucket: ${{ secrets.AWS_BUCKET }}
     
-      # Runs a set of commands using the runners shell; THIS DOESN'T WORK
-      - name: Run a multi-line script
-        run: |
-          #install PIP
-          python -m pip install --upgrade pip
-          #install all dependencies as defined by requirements.txt in the current directory
-          pip3 install -r requirements.txt -t .
-          #for installing invidividual modules
-          #pip3 install Flask -t .
-          #zip files into current directory
-          zip -r invalidate-cloudFront-cache.zip .
-         
-          #for installing chrome
-          wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-          sudo dpkg -i google-chrome-stable_current_amd64.deb
-         
-          #ensuring current working directory is accessible by the function--this might not be doing anything
-          export PATH=$PATH:$(pwd)
     
       #Deploy lambda_function.py to AWS
       - name: AWS Lambda Deploy
