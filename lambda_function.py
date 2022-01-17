@@ -3,17 +3,17 @@ import logging
 import boto3
 import time
 import os
-import sentry_sdk
-from sentry_sdk.integrations.aws_lambda import AwsLambdaIntegration
+#import sentry_sdk
+#from sentry_sdk.integrations.aws_lambda import AwsLambdaIntegration
 
-SENTRY_DSN = os.environ['SENTRY_DSN']
+#SENTRY_DSN = os.environ['SENTRY_DSN']
 
-sentry_sdk.init(
-    dsn=SENTRY_DSN,
-    integrations=[AwsLambdaIntegration(timeout_warning=True)]
-    # To set a uniform sample rate
-    traces_sample_rate=1.0,
-)
+#sentry_sdk.init(
+#    dsn=SENTRY_DSN,
+#    integrations=[AwsLambdaIntegration(timeout_warning=True)]
+#    # To set a uniform sample rate
+#    traces_sample_rate=1.0,
+#)
 
 #123The distribution ID of the AWS CloudFront distribution is set as an environment variable of the function
 DistributionId = os.environ['DISTRIBUTION_ID']
