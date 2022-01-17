@@ -6,9 +6,13 @@ import os
 import sentry_sdk
 from sentry_sdk.integrations.aws_lambda import AwsLambdaIntegration
 
+SENTRY_DSN = os.environ.get('SENTRY_DSN')
+
 sentry_sdk.init(
-    dsn="https://8d8c108d2ee9437ab54a3e257c21e4c1@o673219.ingest.sentry.io/6153670",
+    dsn=SENTRY_DSN,
     integrations=[AwsLambdaIntegration(timeout_warning=True)]
+    # To set a uniform sample rate
+    traces_sample_rate=1.0,
 )
 
 #123The distribution ID of the AWS CloudFront distribution is set as an environment variable of the function
