@@ -3,6 +3,13 @@ import logging
 import boto3
 import time
 import os
+import sentry_sdk
+from sentry_sdk.integrations.aws_lambda import AwsLambdaIntegration
+
+sentry_sdk.init(
+    dsn="https://8d8c108d2ee9437ab54a3e257c21e4c1@o673219.ingest.sentry.io/6153670",
+    integrations=[AwsLambdaIntegration(timeout_warning=True)]
+)
 
 #123The distribution ID of the AWS CloudFront distribution is set as an environment variable of the function
 DistributionId = os.environ['DISTRIBUTION_ID']
